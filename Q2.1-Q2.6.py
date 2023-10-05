@@ -37,7 +37,7 @@ class DecisionTree:
         s = str(self.tree)
         s = s.replace("\'", "\"")
         json_object = json.loads(s)
-        printprint(json.dumps(json_object, indent=2))
+        print(json.dumps(json_object, indent=2))
 
     def make_subtree(self, df, tree=None):
         feature, cutoff = self.find_best_split(df)
@@ -174,7 +174,7 @@ def error_score(ytrue, ypred):
 if __name__ == '__main__':
     print('\n-------------- Q2.1-Q2.6------------------------')
 
-    data = pd.read_table('data/D1.txt', sep=" ", header=None, names=["X1", "X2", "Y"])
+    data = pd.read_table('data/Druns.txt', sep=" ", header=None, names=["X1", "X2", "Y"])
     Xtest=pd.DataFrame(np.random.uniform(0,1,size=(1000000,2)), columns=list(['X1','X2']))
 
     # Split Features and target
